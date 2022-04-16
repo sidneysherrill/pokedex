@@ -1,21 +1,18 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import { index } from "./../api/pokemon";
+import { onMounted } from "vue";
+import { usePokemonStore } from "@/stores/pokemon";
 
-// reactive state
+const pokemon = usePokemonStore();
 
-const pokemon = ref([]);
-
-// lifecycle hooks
 onMounted(() => {
-  index().then((data) => (pokemon.value = data));
+  pokemon.fetchList();
 });
 </script>
 
 <template>
   <h1>Pokédex</h1>
   <ol>
-    <li class="capitalize" v-for="p in pokemon">
+    <li class="capitalize" v-for="p in pokemon.list">
       <router-link :to="`/pokemon/${p.name}`">{{ p.name }}</router-link>
     </li>
   </ol>
