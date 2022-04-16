@@ -1,21 +1,20 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import { useRoute } from "vue-router";
+import { onMounted } from "vue";
 import { usePokemonStore } from "@/stores/pokemon";
+
+const props = defineProps({
+  id: String,
+});
 
 const pokemon = usePokemonStore();
 
-// reactive state
-const route = useRoute();
-
-// lifecycle hooks
 onMounted(() => {
-  pokemon.fetchActive(route.params.name);
+  pokemon.fetchActive(props.id);
 });
 </script>
 
 <template>
-  <p class="capitalize">{{ $route.params.name }}</p>
+  <p class="capitalize">{{ id }}</p>
   <router-link to="/">Back</router-link>
   <p v-if="pokemon.active">{{ pokemon.active }}</p>
 </template>

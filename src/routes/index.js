@@ -4,7 +4,7 @@ import Single from "../pages/Single.vue";
 
 const routes = [
   { path: "/", component: Index },
-  { path: "/pokemon/:name", component: Single },
+  { path: "/pokemon/:id", component: Single, props: true },
 ];
 
 //TO DO: make routes dynamic based on pokemon ID or name
