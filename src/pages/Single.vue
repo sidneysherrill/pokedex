@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
+import { single } from "./../api/pokemon";
 
 // reactive state
 const route = useRoute();
@@ -8,11 +9,7 @@ const pokemon = ref(null); //TO DO: don't need array, need single pokemon
 
 // lifecycle hooks
 onMounted(() => {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${route.params.name}/`)
-    .then((response) => response.json())
-    .then((data) => {
-      pokemon.value = data; //TO DO: don't need results, need single pokemon
-    });
+  single(route.params.name).then((data) => (pokemon.value = data));
 });
 </script>
 

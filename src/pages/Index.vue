@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import { index } from "./../api/pokemon";
 
 // reactive state
 
@@ -7,11 +8,7 @@ const pokemon = ref([]);
 
 // lifecycle hooks
 onMounted(() => {
-  fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=10000")
-    .then((response) => response.json())
-    .then((data) => {
-      pokemon.value = data.results;
-    });
+  index().then((data) => (pokemon.value = data));
 });
 </script>
 
