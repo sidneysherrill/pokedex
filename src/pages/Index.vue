@@ -11,9 +11,16 @@ onMounted(() => {
 
 <template>
   <h1>Pokédex</h1>
-  <ol>
-    <li class="capitalize" v-for="p in pokemon.list">
-      <router-link :to="`/pokemon/${p.name}`">{{ p.name }}</router-link>
+  <ol class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+    <li class="capitalize" v-for="(p, i) in pokemon.list">
+      <router-link :to="`/pokemon/${p.name}`">
+        <img
+          :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+            i + 1
+          }.png`"
+        />
+        {{ p.name }}</router-link
+      >
     </li>
   </ol>
 </template>
