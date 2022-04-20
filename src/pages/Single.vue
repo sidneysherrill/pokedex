@@ -32,7 +32,7 @@ onMounted(() => {
     <pokemon-species :species="pokemon.active.species.name" />
     <img
       class="float-right"
-      :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.active.order}.png`"
+      :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`"
     />
     <pokemon-info
       :abilities="pokemon.active.abilities"
