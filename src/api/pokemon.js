@@ -7,7 +7,7 @@ function single(id) {
 }
 
 function index() {
-  return fetch(`${BASE}?offset=0&limit=10000`)
+  return fetch(`${BASE}?offset=0&limit=898`)
     .then((response) => response.json())
     .then((data) => data.results);
 }

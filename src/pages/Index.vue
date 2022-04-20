@@ -18,9 +18,13 @@ onMounted(() => {
     >
       <router-link :to="`/pokemon/${p.name}`">
         <img
+          class="w-full"
           :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
             i + 1
           }.png`"
+          loading="lazy"
+          width="100"
+          height="100"
         />
         {{ p.name }}</router-link
       >
