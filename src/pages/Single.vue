@@ -28,21 +28,22 @@ onMounted(() => {
     {{ pokemon.active?.forms[0].name }}
   </p>
   <div
-    class="capitalize font-mono p-8 border-8 bg-lime-200"
+    class="capitalize font-mono p-8 border-8 bg-lime-200 grid md:grid-cols-2 gap-8"
     v-if="pokemon.active"
   >
-    <pokemon-species :species="pokemon.active.species.name" />
-    <img
-      class="float-right"
-      :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`"
-    />
-    <pokemon-info
-      :abilities="pokemon.active.abilities"
-      :weight="pokemon.active.weight"
-      :height="pokemon.active.height"
-    />
     <div>
+      <pokemon-species :species="pokemon.active.species.name" />
+      <pokemon-info
+        :abilities="pokemon.active.abilities"
+        :weight="pokemon.active.weight"
+        :height="pokemon.active.height"
+      />
       <pokemon-stats :stats="pokemon.active.stats" />
+    </div>
+    <div>
+      <img
+        :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`"
+      />
     </div>
   </div>
 </template>

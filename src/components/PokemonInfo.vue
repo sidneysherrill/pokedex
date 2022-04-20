@@ -7,12 +7,20 @@ const props = defineProps({
 </script>
 
 <template>
-  <h2>Abilities</h2>
-  <ul>
-    <li v-for="a in props.abilities">{{ a.ability.name }}</li>
-  </ul>
-  <h2>Weight</h2>
-  <p>{{ weight }}</p>
-  <h2>Height</h2>
-  <p>{{ height }}</p>
+  <article class="bg-white p-6 rounded-lg flex justify-between">
+    <div>
+      <h2 class="font-bold text-xl">Abilities</h2>
+      <ul>
+        <li v-for="a in props.abilities">{{ a.ability.name }}</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-bold text-xl">Weight</h2>
+      <p>{{ weight }}</p>
+    </div>
+    <div>
+      <h2 class="font-bold text-xl">Height</h2>
+      <p>{{ height }}</p>
+    </div>
+  </article>
 </template>
