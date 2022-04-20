@@ -7,8 +7,6 @@ const routes = [
   { path: "/pokemon/:id", component: Single, props: true },
 ];
 
-//TO DO: make routes dynamic based on pokemon ID or name
-
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
