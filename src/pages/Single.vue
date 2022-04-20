@@ -24,7 +24,9 @@ onMounted(() => {
       >Back</router-link
     >
   </div>
-  <p class="capitalize text-4xl my-6 mx-4 font-mono">{{ id }}</p>
+  <p class="capitalize text-4xl my-6 mx-4 font-mono">
+    {{ pokemon.active?.forms[0].name }}
+  </p>
   <div
     class="capitalize font-mono p-8 border-8 bg-lime-200"
     v-if="pokemon.active"

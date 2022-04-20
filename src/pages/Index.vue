@@ -10,7 +10,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-slate-200">
+  <div>
     <h1 class="text-4xl py-8 px-4 font-family">Pokédex</h1>
     <div>
       <ol class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
