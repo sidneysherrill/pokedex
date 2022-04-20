@@ -32,7 +32,6 @@ onMounted(() => {
     v-if="pokemon.active"
   >
     <div class="grid gap-4">
-      <pokemon-species :species="pokemon.active.species.name" />
       <pokemon-info
         :abilities="pokemon.active.abilities"
         :weight="pokemon.active.weight"
