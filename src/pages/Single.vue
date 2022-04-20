@@ -31,7 +31,7 @@ onMounted(() => {
     class="capitalize font-mono p-8 border-8 bg-lime-200 grid md:grid-cols-2 gap-8"
     v-if="pokemon.active"
   >
-    <div>
+    <div class="grid gap-4">
       <pokemon-species :species="pokemon.active.species.name" />
       <pokemon-info
         :abilities="pokemon.active.abilities"
