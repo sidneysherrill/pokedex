@@ -17,7 +17,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <h1 class="capitalize text-4xl pb-8 px-4">
+  <h1
+    class="capitalize text-3xl sm:text-4xl pb-8 px-4 text-center sm:text-left"
+  >
     {{ pokemon.active?.forms[0].name }}
   </h1>
   <div

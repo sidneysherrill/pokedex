@@ -1,5 +1,9 @@
 <template>
-  <h1 class="text-4xl pb-8 px-4">About</h1>
+  <h1
+    class="capitalize text-3xl sm:text-4xl pb-8 px-4 text-center sm:text-left"
+  >
+    About
+  </h1>
   <div class="grid md:grid-cols-2 gap-4">
     <article class="shadow hover:shadow-lg rounded-md p-4 bg-white">
       <img
