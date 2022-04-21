@@ -17,9 +17,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <p class="capitalize text-4xl py-8 px-4">
+  <h1 class="capitalize text-4xl pb-8 px-4">
     {{ pokemon.active?.forms[0].name }}
-  </p>
+  </h1>
   <div
     class="capitalize font-mono p-4 bg-lime-200 grid md:grid-cols-2 gap-8 rounded-lg"
     v-if="pokemon.active"

@@ -1,5 +1,10 @@
+<script setup>
+import Navbar from "@/components/Navbar.vue";
+</script>
+
 <template>
-  <div class="bg-slate-200 max-w-6xl px-6 mx-auto">
+  <div class="max-w-6xl px-6 mx-auto">
+    <navbar />
     <router-view></router-view>
   </div>
 </template>

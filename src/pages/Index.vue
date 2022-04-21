@@ -11,7 +11,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <h1 class="text-4xl py-8 px-4">Pokédex</h1>
+    <h1 class="text-4xl pb-8 px-4">Pokédex</h1>
     <div>
       <ol class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         <li
