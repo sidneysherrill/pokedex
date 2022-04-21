@@ -9,7 +9,9 @@ function single(id) {
 function index() {
   return fetch(`${BASE}?offset=0&limit=898`)
     .then((response) => response.json())
-    .then((data) => data.results);
+    .then((data) =>
+      data.results.map((p, i) => Object.assign({ id: i + 1 }, p))
+    );
 }
 
 export { single, index };

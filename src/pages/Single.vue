@@ -3,7 +3,6 @@ import { onMounted } from "vue";
 import { usePokemonStore } from "@/stores/pokemon";
 import PokemonInfo from "@/components/PokemonInfo.vue";
 import PokemonStats from "@/components/PokemonStats.vue";
-import PokemonSpecies from "@/components/PokemonSpecies.vue";
 
 const props = defineProps({
   id: String,
@@ -12,6 +11,7 @@ const props = defineProps({
 const pokemon = usePokemonStore();
 
 onMounted(() => {
+  pokemon.fetchFavorites();
   pokemon.fetchActive(props.id);
 });
 </script>
@@ -25,6 +25,19 @@ onMounted(() => {
     v-if="pokemon.active"
   >
     <div class="md:order-last">
+      <button
+        @click="pokemon.toggleFavorite(id)"
+        :class="{
+          'bg-red-400 hover:bg-red-500': pokemon.favorites.includes(id),
+          'bg-emerald-400 hover:bg-emerald-500':
+            !pokemon.favorites.includes(id),
+        }"
+        class="text-white px-3 py-1 rounded font-bold hover:shadow float-right"
+      >
+        {{
+          pokemon.favorites.includes(id) ? "Remove Favorite" : "Add Favorite"
+        }}
+      </button>
       <img
         class="w-full"
         :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`"

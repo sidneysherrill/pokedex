@@ -6,17 +6,18 @@ const pokemon = usePokemonStore();
 
 onMounted(() => {
   pokemon.fetchList();
+  pokemon.fetchFavorites();
 });
 </script>
 
 <template>
   <div>
-    <h1 class="text-4xl py-8 px-4">Pokédex</h1>
+    <h1 class="text-4xl py-8 px-4">Favorites</h1>
     <div>
       <ol class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         <li
           class="capitalize font-mono hover:italic hover:font-bold shadow hover:shadow-lg rounded-md p-1 bg-amber-200 hover:bg-amber-300"
-          v-for="p in pokemon.list"
+          v-for="p in pokemon.favoritesList"
         >
           <router-link :to="`/pokemon/${p.id}`">
             <img
