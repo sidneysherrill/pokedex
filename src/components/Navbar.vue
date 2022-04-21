@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-  <ul class="navbar flex justify-end gap-4 p-4 font-bold">
+  <ul
+    class="navbar flex justify-center sm:justify-end gap-2 p-4 font-bold text-xs sm:text-base"
+  >
     <li>
       <router-link class="px-3 py-1 rounded" to="/"> List </router-link>
     </li>
@@ -9,6 +11,9 @@
       <router-link class="px-3 py-1 rounded" to="/favorites">
         Favorites
       </router-link>
+    </li>
+    <li>
+      <router-link class="px-3 py-1 rounded" to="/game"> Game </router-link>
     </li>
     <li>
       <router-link class="px-3 py-1 rounded" to="/about"> About </router-link>
