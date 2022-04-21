@@ -10,6 +10,9 @@
         Favorites
       </router-link>
     </li>
+    <li>
+      <router-link class="px-3 py-1 rounded" to="/about"> About </router-link>
+    </li>
   </ul>
 </template>
 
