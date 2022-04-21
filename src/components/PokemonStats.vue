@@ -6,8 +6,8 @@ const props = defineProps({
 
 <template>
   <article class="bg-white p-6 rounded-lg">
-    <h2 class="font-bold text-xl">Stats</h2>
-    <ul class="grid grid-cols-6 gap-1">
+    <h2 class="font-bold text-xl mb-2">Stats</h2>
+    <ul class="grid grid-cols-3 lg:grid-cols-6 gap-1">
       <li v-for="s in props.stats">
         <ul class="flex flex-col-reverse">
           <li

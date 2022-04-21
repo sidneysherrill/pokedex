@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <article class="bg-white p-6 rounded-lg flex justify-between">
+  <article class="bg-white p-6 rounded-lg grid gap-4 lg:grid-cols-3">
     <div>
       <h2 class="font-bold text-xl">Abilities</h2>
       <ul>

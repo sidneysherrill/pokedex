@@ -11,9 +11,9 @@ onMounted(() => {
 
 <template>
   <div>
-    <h1 class="text-4xl py-8 px-4 font-family">Pokédex</h1>
+    <h1 class="text-4xl py-8 px-4">Pokédex</h1>
     <div>
-      <ol class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <ol class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         <li
           class="capitalize font-mono hover:italic hover:font-bold shadow hover:shadow-lg rounded-md p-1 bg-amber-200 hover:bg-amber-300"
           v-for="(p, i) in pokemon.list"
@@ -28,8 +28,10 @@ onMounted(() => {
               width="100"
               height="100"
             />
-            {{ p.name }}</router-link
-          >
+            <span class="px-1.5">
+              {{ p.name }}
+            </span>
+          </router-link>
         </li>
       </ol>
     </div>
